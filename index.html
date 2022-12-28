@@ -16,67 +16,67 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city "
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
-              />
-            </div>
-          </div>
-        </form>
-        <h1 id="city">Montreal</h1>
-        <ul>
-          <li id="date"></li>
-          <li>Snowing</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-                src="src/snow1.png"
-                alt="snow"
-                class="weather-icon float-left"
-              />
-              <div class="float-left">
-                <span class="temperature" id="temperature">-8</span
-                ><span class="units">
-                  <a href="#" id="celsius">°C</a> <span class="gray"> |</span>
-                  <a href="#" id="fahrenheit">°F</a>
-                </span>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city "
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
               </div>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Precipitation: 14 %</li>
-              <li>Humidity: 96 %</li>
-              <li>Wind: 7 km/h</li>
-            </ul>
-            <br />
-            <small>
-              <a
-                href="https://github.com/JuliaSmyshnikova/Vanilla-Weather-App.git"
-              >
-                Open-source <code></code>
-              </a>
-              <span class="gray"> by Yuliia Smyshnikova</span>
-            </small>
+          </form>
+          <h1 id="city">Montreal</h1>
+          <ul>
+            <li id="date"></li>
+            <li>Snowing</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="src/snow1.png"
+                  alt="snow"
+                  class="weather-icon float-left"
+                />
+                <div class="float-left">
+                  <span class="temperature" id="temperature">-8</span
+                  ><span class="units">
+                    <a href="#" id="celsius">°C</a> <span class="gray"> |</span>
+                    <a href="#" id="fahrenheit">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 14 %</li>
+                <li>Humidity: 96 %</li>
+                <li>Wind: 7 km/h</li>
+              </ul>
+              <br />
+            </div>
           </div>
         </div>
+        <small>
+          <a href="https://github.com/JuliaSmyshnikova/Vanilla-Weather-App.git">
+            Open-source <code></code>
+          </a>
+          <span class="gray"> by Yuliia Smyshnikova</span>
+        </small>
       </div>
     </div>
     <script src="src/script.js"></script>

@@ -32,13 +32,14 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
-    "scr",
+    "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  //iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "7d0fd8c6293b573801711c68993c7ff2";
-let city = "Paris";
+let city = "Calgary";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);

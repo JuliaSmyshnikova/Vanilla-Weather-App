@@ -38,8 +38,23 @@ function displayTemperature(response) {
   //iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city) {
+  let apiKey = "7d0fd8c6293b573801711c68993c7ff2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDafault();
+  let cityInputElement = document.querySelector("#city-input");
+  console.log(cityInputElement.value);
+}
+
 let apiKey = "7d0fd8c6293b573801711c68993c7ff2";
 let city = "Calgary";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+search("Calgary");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

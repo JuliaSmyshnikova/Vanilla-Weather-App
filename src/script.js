@@ -47,7 +47,7 @@ function search(city) {
 function handleSubmit(event) {
   event.preventDafault();
   let cityInputElement = document.querySelector("#city-input");
-  console.log(cityInputElement.value);
+  search(cityInputElement.value);
 }
 
 let apiKey = "7d0fd8c6293b573801711c68993c7ff2";

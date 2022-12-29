@@ -64,4 +64,9 @@ li {
 
 .weather-temperature .active {
   color: #70757a;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }

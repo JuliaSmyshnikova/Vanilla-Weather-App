@@ -45,14 +45,10 @@ function search(city) {
 }
 
 function handleSubmit(event) {
-  event.preventDafault();
+  event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-
-let apiKey = "7d0fd8c6293b573801711c68993c7ff2";
-let city = "Calgary";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 search("Calgary");
 

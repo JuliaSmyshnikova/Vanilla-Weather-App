@@ -14,6 +14,32 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let foreCastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Satu"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="41"
+      />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperatures-max"> 18 ° </span>
+        <span class="weather-forecast-temperatures-min"> 12 ° </span>
+      </div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  foreCastElement.innerHTML = forecastHTML;
+}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -81,3 +107,4 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsiusTemperature);
 
 search("Calgary");
+displayForecast();

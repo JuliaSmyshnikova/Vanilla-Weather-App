@@ -30,7 +30,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
@@ -61,7 +61,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "7d0fd8c6293b573801711c68993c7ff2";
+  let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
@@ -97,8 +97,6 @@ function displayTemperature(response) {
 function search(city) {
   let apiKey = "7d0fd8c6293b573801711c68993c7ff2";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  //`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  //`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
